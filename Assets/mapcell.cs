@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class mapcell : MonoBehaviour
 {
+    [Serializable]
     private int Celltype;
     // Start is called before the first frame update
 
