@@ -13,12 +13,15 @@ public class mapGrid : MonoBehaviour
     public mapcell cellPrefab;
 
     private mapcell[] cells;
+    private string s;
+    [SerializeField]
+    private int[,] map;
     // Start is called before the first frame update
     void Start()
     {
         int type;
-        string s;
         cells = new mapcell[height * width];
+        map = new int[height, width];
         for (int i = 0, count = 0; i < height; i++)
         {
             for (int j = 0; j < width; j++)
@@ -32,12 +35,11 @@ public class mapGrid : MonoBehaviour
                     type = 0;
                 }
                 CreateCell(j,i,count++,type);
-                s = cells[count - 1].SavetoString();
-                Console.WriteLine(s);
-                File.WriteAllText("./Assets/data/map.json", s);
+                map[i,j] = type;
             }
         }
-        
+        s = JsonUtility.ToJson(map);
+        File.WriteAllText("./Assets/data/map.json", s);
     }
 
     void CreateCell(int x, int y, int count,int type)
