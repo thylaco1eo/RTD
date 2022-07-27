@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UIElements;
+using LitJson;
 
 public class mapGrid : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class mapGrid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        string path = "./Assets/data/map.json";
+        if (File.Exists(path))
+        {
+            LoadMap(path);
+        }
         int type;
         cells = new mapcell[height * width];
         map = new int[height, width];
@@ -38,8 +44,15 @@ public class mapGrid : MonoBehaviour
                 map[i,j] = type;
             }
         }
-        s = JsonUtility.ToJson(map);
+        s = JsonMapper.ToJson(map);
         File.WriteAllText("./Assets/data/map.json", s);
+    }
+
+	int LoadMap(string path)
+	{
+		string Jsonstring = File.ReadAllText(path);
+        JsonData data = JsonMapper.ToObject(Jsonstring);
+        return data[0];
     }
 
     void CreateCell(int x, int y, int count,int type)
