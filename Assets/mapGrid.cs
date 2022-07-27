@@ -48,11 +48,16 @@ public class mapGrid : MonoBehaviour
         File.WriteAllText("./Assets/data/map.json", s);
     }
 
-	int LoadMap(string path)
+	void LoadMap(string path)
 	{
 		string Jsonstring = File.ReadAllText(path);
         JsonData data = JsonMapper.ToObject(Jsonstring);
-        return data[0];
+        int[] array = new int[data.Count];
+        for (int i = 0; i < data.Count; i++)
+        {
+            array[i] = data[i];
+        }
+        Console.WriteLine("test");
     }
 
     void CreateCell(int x, int y, int count,int type)
