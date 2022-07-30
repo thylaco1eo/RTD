@@ -8,7 +8,7 @@ using LitJson;
 
 public class mapGrid : MonoBehaviour
 {
-    public int width = 6;
+    public int width = 7;
     public int height = 6;
 
     public mapcell cellPrefab;
@@ -16,48 +16,54 @@ public class mapGrid : MonoBehaviour
     private mapcell[] cells;
     private string s;
     [SerializeField]
-    private int[,] map;
+    private int[] map;
     // Start is called before the first frame update
     void Start()
     {
         string path = "./Assets/data/map.json";
+        cells = new mapcell[height * width];
+        map = new int[height*width];
         if (File.Exists(path))
         {
-            LoadMap(path);
-        }
-        int type;
-        cells = new mapcell[height * width];
-        map = new int[height, width];
-        for (int i = 0, count = 0; i < height; i++)
-        {
-            for (int j = 0; j < width; j++)
+            map = LoadMap(path);
+            for (int i = 0, count = 0; i < height; i++)
             {
-                if (i == j)
+                for (int j = 0; j < width; j++)
                 {
-                    type = 1;
+                    CreateCell(j, i, count++, map[i*width+j]);
                 }
-                else
-                {
-                    type = 0;
-                }
-                CreateCell(j,i,count++,type);
-                map[i,j] = type;
             }
         }
-        s = JsonMapper.ToJson(map);
-        File.WriteAllText("./Assets/data/map.json", s);
+        else
+        {
+            int type;
+            for (int i = 0, count = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    if (i == j || j == i+1)
+                    {
+                        type = 1;
+                    }
+                    else
+                    {
+                        type = 0;
+                    }
+                    CreateCell(j,i,count++,type);
+                    map[i*width+j] = type;
+                }
+            }
+            s = JsonMapper.ToJson(map);
+            File.WriteAllText("./Assets/data/map.json", s);
+        }
+        
     }
 
-	void LoadMap(string path)
+	int[] LoadMap(string path)
 	{
 		string Jsonstring = File.ReadAllText(path);
-        JsonData data = JsonMapper.ToObject(Jsonstring);
-        int[] array = new int[data.Count];
-        for (int i = 0; i < data.Count; i++)
-        {
-            array[i] = data[i];
-        }
-        Console.WriteLine("test");
+        int[] data = JsonMapper.ToObject<int[]>(Jsonstring);
+        return data;
     }
 
     void CreateCell(int x, int y, int count,int type)
