@@ -8,7 +8,7 @@ using LitJson;
 
 public class mapGrid : MonoBehaviour
 {
-    public int width = 7;
+    public int width = 6;
     public int height = 6;
 
     public mapcell cellPrefab;

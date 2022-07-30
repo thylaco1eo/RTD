@@ -8,7 +8,7 @@ using System.IO;
 
 public class enemy : MonoBehaviour
 {
-    private int width = 7;
+    private int width = 6;
     private int height = 6;
     private Vector3[] m =
     {
@@ -22,6 +22,7 @@ public class enemy : MonoBehaviour
     void Start()
     {
         this.transform.position = new Vector3(0,0,0);
+        ReadMap("./Assets/data/map.json");
         
     }
 
@@ -42,9 +43,11 @@ public class enemy : MonoBehaviour
         foreach(Vector3 i in m)
         {
             Vector3 tmp = i + this.transform.position;
-            if (tmp.x>.0 && tmp.y>=0 && tmp.x < this.width && tmp.y < this.height && this.map[(int)tmp.x*width +(int)tmp.y] == 1)
+            if (tmp.x>=0 && tmp.y>=0 && tmp.x < this.height && tmp.y < this.width && this.map[(int)tmp.y*width +(int)tmp.x] == 1)
             {
+                this.map[(int)this.transform.position.y * this.width + (int)this.transform.position.x] = 0;
                 this.transform.position = tmp;
+                
             }
         }
     }
