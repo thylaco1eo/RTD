@@ -5,10 +5,12 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     public List<GameObject> enemies;
+    private tower towerData;
     // Start is called before the first frame update
     void Start()
     {
         enemies = new List<GameObject>();
+        towerData = gameObject.GetComponentInChildren<tower>();
     }
 
     // Update is called once per frame
@@ -43,6 +45,13 @@ public class Shoot : MonoBehaviour
                 other.gameObject.GetComponent<EnemyDestructionDelegate>();
             del.enemyDelegate -= OnEnemyDestroy;
         }
+    }
+
+    void shooting(Collider2D target)
+    {
+        GameObject bullet = towerData.type;
+        Vector3 startPosition = gameObject.transform.position;
+        Vector3 targetPosition = target.transform.position;
     }
 
 

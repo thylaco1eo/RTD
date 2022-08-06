@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable()]
 public class tower : MonoBehaviour
 {
-    private int Type { get; set; }
+    public GameObject type { get; set; }
     private float AttackRange { get; set; }
     private float AttackSpeed { get; set; }
     private float Attack { get; set; }
