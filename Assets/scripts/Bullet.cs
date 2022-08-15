@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public float speed = 10;
-    public int damage;
+    public float damage;
     public GameObject target;
     public Vector3 startPosition;
     public Vector3 targetPosition;
+    public int type;
 
     private float distance;
     private float startTime;
@@ -31,7 +32,16 @@ public class bullet : MonoBehaviour
         {
             if (target != null)
             {
-                ;
+                float multi = target.GetComponent<Status>().reaction(type);
+                Transform healthBarTransform = target.transform.Find("HealthBar");
+                HealthBar healthBar = 
+                    healthBarTransform.gameObject.GetComponent<HealthBar>();
+                healthBar.currentHealth -= Mathf.Max(damage*multi, 0);
+                // 4
+                if (healthBar.currentHealth <= 0)
+                {
+                    Destroy(target);
+                }
             }
             Destroy(gameObject);
         }  

@@ -8,47 +8,67 @@ using System.IO;
 
 public class enemy : MonoBehaviour
 {
-    private int width = 6;
-    private int height = 6;
-    private Vector3[] m =
-    {
-        new Vector3(-1,0,0),
-        new Vector3(0,-1,0),
-        new Vector3(1,0,0),
-        new Vector3(0,1,0)
-    };
-    private int[] map;
+    private float speed = 1f;
+    private int checkpoint = 0;
+    private Vector3 startPosition;
+    public GameObject[] map;
     // Start is called before the first frame update
     void Start()
     {
-        this.transform.position = new Vector3(0,0,0);
-        ReadMap("./Assets/data/map.json");
-        
+        startPosition = map[checkpoint].transform.position;
+        //ReadMap("./Assets/data/map.json");
     }
 
     // Update is called once per frame
     void Update()
     {
-        move();
+        Move();
     }
 
     void ReadMap(string path)
     {
         string Jsonstring = File.ReadAllText(path);
-        this.map = JsonMapper.ToObject<int[]>(Jsonstring);
+        this.map = JsonMapper.ToObject<GameObject[]>(Jsonstring);
     }
 
-    void move()
+    void Move()
     {
-        foreach(Vector3 i in m)
+        Vector3 endPosition = map [checkpoint + 1].transform.position;
+        float pathLength = Vector3.Distance (startPosition, endPosition);
+        float totalTimeForPath = pathLength /speed;
+        gameObject.transform.position = Vector2.Lerp (startPosition, endPosition, Time.deltaTime / totalTimeForPath);
+        startPosition = gameObject.transform.position;
+        if (gameObject.transform.position.Equals(endPosition))
         {
-            Vector3 tmp = i + this.transform.position;
-            if (tmp.x>=0 && tmp.y>=0 && tmp.x < this.height && tmp.y < this.width && this.map[(int)tmp.y*width +(int)tmp.x] == 1)
+            if (checkpoint < map.Length - 2)
             {
-                this.map[(int)this.transform.position.y * this.width + (int)this.transform.position.x] = 0;
-                this.transform.position = tmp;
-                
+                checkpoint++;
+            }
+            else
+            {
+                Destroy(gameObject);
             }
         }
+    }
+
+    public float DistancetoGoal()
+    {
+        float distance = 0;
+        distance += Vector2.Distance(gameObject.transform.position, map[checkpoint].transform.position);
+        for (int i = checkpoint + 1; i < map.Length - 1; i++)
+        {
+            distance += Vector2.Distance(map[i].transform.position, map[i+1].transform.position);
+        }
+        return distance;
+    }
+
+    public void freeze()
+    {
+        speed = 0.1f * speed;
+    }
+
+    public void restoreSpeed()
+    {
+        speed = 10 * speed;
     }
 }
