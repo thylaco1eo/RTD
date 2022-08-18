@@ -33,10 +33,11 @@ public class Bullet : MonoBehaviour
             if (target != null)
             {
                 float multi = target.GetComponent<Status>().reaction(type);
+                float Armor = target.GetComponent<enemy>().Armor;
                 Transform healthBarTransform = target.transform.Find("HealthBar");
                 HealthBar healthBar = 
                     healthBarTransform.gameObject.GetComponent<HealthBar>();
-                healthBar.currentHealth -= Mathf.Max(damage*multi, 0);
+                healthBar.currentHealth -= Mathf.Max(damage*multi/Armor, 0);
                 // 4
                 if (healthBar.currentHealth <= 0)
                 {

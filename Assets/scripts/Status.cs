@@ -6,15 +6,17 @@ public class Status : MonoBehaviour
 {
     private int status;
     private float[] timer;
-    private int count;
+    private int count = 0;
+    private bool priod;
 
     private bool[] S;
     // Start is called before the first frame update
     void Start()
     {
+        priod = true;
         // freeze, Superconduction, Electrification
         S = new bool[3]{false,false,false};
-        timer = new float[3]{0.0f,0.0f,0.0f};
+        timer = new float[4]{0.0f,0.0f,0.0f,0.0f};
     }
 
     // Update is called once per frame
@@ -25,11 +27,44 @@ public class Status : MonoBehaviour
             gameObject.GetComponent<enemy>().restoreSpeed();
             timer[0] = 0.0f;
             S[0] = false;
-            status = 0;
         }
         else
         {
             timer[0] -= Time.deltaTime;
+        }
+
+        if (S[1] && timer[1] - Time.deltaTime <= 0)
+        {
+            gameObject.GetComponent<enemy>().RestoreArmor();
+            timer[1] = 0.0f;
+            S[1] = false;
+        }
+        else
+        {
+            timer[1] -= Time.deltaTime;
+        }
+
+        if (S[2] && count<0)
+        {
+            S[2] = false;
+        }
+        else
+        {
+            if (S[2] && priod && timer[2] - Time.deltaTime <= 0)
+            {
+                gameObject.GetComponent<enemy>().RecoverFromStun();
+                count -= 1;
+                timer[3] = 0.7f;
+                priod = false;
+            }
+            else if (S[2] && !priod && timer[3] - Time.deltaTime <= 0)
+            {
+                gameObject.GetComponent<enemy>().GetStun();
+                timer[2] = 0.1f;
+                priod = true;
+            }
+            timer[2] -= Time.deltaTime;
+            timer[3] -= Time.deltaTime;
         }
     }
 
@@ -65,7 +100,6 @@ public class Status : MonoBehaviour
                 case 10:// water(2)+elct(8) = Electrification(10)
                     status = 0;
                     Electrification();
-                    multi = 1.1f;
                     break;
                 case 12://fire(4)+elct(8) = explosion(12)
                     status = 0;
@@ -104,12 +138,26 @@ public class Status : MonoBehaviour
 
     void Superconduction()
     {
-        
+        if (!S[1])
+        {
+            gameObject.GetComponent<enemy>().ReduceArmor();
+        }
+
+        timer[1] = 3.0f;
+        S[1] = true;
     }
 
     void Electrification()
     {
-        
+        if (!S[2])
+        {
+            gameObject.GetComponent<enemy>().GetStun();
+        }
+
+        S[2] = true;
+        count = 3;
+        timer[3] = 0.7f;
+        timer[2] = 0.1f;
     }
     
 }

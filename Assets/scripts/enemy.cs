@@ -9,6 +9,7 @@ using System.IO;
 public class enemy : MonoBehaviour
 {
     private float speed = 1f;
+    public float Armor;
     private int checkpoint = 0;
     private Vector3 startPosition;
     public GameObject[] map;
@@ -70,5 +71,25 @@ public class enemy : MonoBehaviour
     public void restoreSpeed()
     {
         speed = 10 * speed;
+    }
+
+    public void ReduceArmor()
+    {
+        Armor = 0.7f * Armor;
+    }
+
+    public void RestoreArmor()
+    {
+        Armor = Armor / 0.7f;
+    }
+
+    public void GetStun()
+    {
+        speed = 0.0001f *speed;
+    }
+
+    public void RecoverFromStun()
+    {
+        speed = 10000f * speed;
     }
 }
