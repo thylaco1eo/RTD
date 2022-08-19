@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class placeTower : MonoBehaviour
 {
-    public GameObject TowerPrefab;
-    public AnimationCurve showCurve;
-    public AnimationCurve hidCurve;
-    public float Animationspeed;
+    public GameObject firetower;
+    public GameObject icetower;
+    public GameObject watertower;
+    public GameObject electower;
     public GameObject panel;
 
     private GameObject Tower;
@@ -29,31 +30,68 @@ public class placeTower : MonoBehaviour
         return Tower == null;
     }
 
+    private bool CanUpgrade()
+    {
+        if (Tower != null)
+        {
+            int level = Tower.GetComponent<tower>().GetCurrentLevel();
+            if (level == 1)
+            {
+                return false
+            }
+            else
+            {
+                return true;
+            }
+        }
+    }
+
     private void OnMouseUp()
     {
-        StartCoroutine(ShowPanel(panel));
-
-    }
-
-    IEnumerator ShowPanel(GameObject gameObject)
-    {
-        float timer = 0;
-        while (timer <= 1)
+        if(CanPlaceTower())
         {
-            gameObject.transform.localScale = Vector3.one * showCurve.Evaluate(timer);
-            timer += Time.deltaTime * Animationspeed;
-            yield return null;
+            GameObject child;
+            ShowPanel(panel);
+            GameObject test = gameObject.GetComponent<placeTower>().panel;
+            child = test.transform.GetChild(0).gameObject;
+            child.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                Tower = (GameObject)Instantiate(firetower, transform.position, Quaternion.identity);
+                HidePanel(panel);
+            });
+            child = test.transform.GetChild(1).gameObject;
+            child.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                Tower = (GameObject)Instantiate(icetower, transform.position, Quaternion.identity);
+                HidePanel(panel);
+            });
+            child = test.transform.GetChild(2).gameObject;
+            child.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                Tower = (GameObject)Instantiate(watertower, transform.position, Quaternion.identity);
+                HidePanel(panel);
+            });
+            child = test.transform.GetChild(3).gameObject;
+            child.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                Tower = (GameObject)Instantiate(electower, transform.position, Quaternion.identity);
+                HidePanel(panel);
+            });
+        }
+        else if(CanUpgrade())
+        {
+            
         }
     }
+    
 
-    IEnumerator HidePanel(GameObject gameObject)
+    void ShowPanel(GameObject gameObject)
     {
-        float timer = 0;
-        while (timer <= 1)
-        {
-            gameObject.transform.localScale = Vector3.one * showCurve.Evaluate(timer);
-            timer += Time.deltaTime * Animationspeed;
-            yield return null;
-        }
+        gameObject.SetActive(true);
+    }
+
+    void HidePanel(GameObject gameObject)
+    {
+        gameObject.SetActive(false);
     }
 }

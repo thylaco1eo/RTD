@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8093330692107039702}
   - component: {fileID: -8935213830649470147}
   m_Layer: 2
-  m_Name: tower
+  m_Name: icetower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,6 +47,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f36ea80189ab29e983b6c18974c96f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levels:
+  - cost: 100
+    visual: {fileID: 0}
+    damage: 10
+    AttackSpeed: 2
+  - cost: 150
+    visual: {fileID: 0}
+    damage: 10
+    AttackSpeed: 2
+  type: {fileID: 7548221134142319427, guid: 3b1265726e620105e869845193733e75, type: 3}
+  AttackSpeed: 2
+  element: 1
 --- !u!58 &-7469824389006789168
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -76,6 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
+  target: {fileID: 0}
 --- !u!212 &-8935213830649470147
 SpriteRenderer:
   m_ObjectHideFlags: 0

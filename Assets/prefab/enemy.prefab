@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fb5c7d7a6e87cad92ad7db09c19120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Armor: 10
   map:
   - {fileID: 0}
   - {fileID: 0}
@@ -350,7 +351,7 @@ SpriteRenderer:
   m_Size: {x: 18.56, y: 6.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &-4894031647080105988

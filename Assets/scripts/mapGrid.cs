@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.UIElements;
 using LitJson;
 
 public class mapGrid : MonoBehaviour
@@ -69,8 +68,8 @@ public class mapGrid : MonoBehaviour
     void CreateCell(int x, int y, int count,int type)
     {
         Vector3 position;
-        position.x = x;
-        position.y = y;
+        position.x = x+0.5f;
+        position.y = y+0.5f;
         position.z = 0;
         cells[count] = Instantiate<mapcell>(cellPrefab);
         cells[count].transform.SetParent(transform,false);

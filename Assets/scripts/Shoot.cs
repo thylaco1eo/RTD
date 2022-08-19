@@ -35,7 +35,7 @@ public class Shoot : MonoBehaviour
 
         if (target is not null)
         {
-            if (Time.time - lastShoot > towerData.AttackSpeed)
+            if (Time.time - lastShoot > towerData.Currentlevel.AttackSpeed)
             {
                 Shooting(target.GetComponent<Collider2D>());
                 lastShoot = Time.time;
@@ -86,7 +86,7 @@ public class Shoot : MonoBehaviour
         bulletcomp.target = target.gameObject;
         bulletcomp.startPosition = startPosition;
         bulletcomp.targetPosition = targetPosition;
-        bulletcomp.damage = 5.0f;
+        bulletcomp.damage = towerData.Currentlevel.damage;
 
     }
 
