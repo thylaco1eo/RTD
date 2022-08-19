@@ -8,29 +8,29 @@ using LitJson;
 
 public class mapGrid : MonoBehaviour
 {
-    public int width = 6;
-    public int height = 6;
+    public int width = 10;
+    public int height = 5;
 
     public mapcell cellPrefab;
 
     private mapcell[] cells;
     private string s;
     [SerializeField]
-    private int[] map;
+    public int[] map;
     // Start is called before the first frame update
     void Start()
     {
         string path = "./Assets/data/map.json";
-        cells = new mapcell[height * width];
-        map = new int[height*width];
+        cells = new mapcell[4 * height * width];
+        map = new int[4 * height*width];
         if (File.Exists(path))
         {
             map = LoadMap(path);
-            for (int i = 0, count = 0; i < height; i++)
+            for (int i = -1*height, count = 0; i < height; i++)
             {
-                for (int j = 0; j < width; j++)
+                for (int j = -1*width; j < width; j++)
                 {
-                    CreateCell(j, i, count++, map[i*width+j]);
+                    CreateCell(j, i, count++, map[(i+height)*2*width+j+width]);
                 }
             }
         }
