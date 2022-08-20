@@ -13,7 +13,7 @@ public class Status : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        priod = true;
+        priod = false;
         // freeze, Superconduction, Electrification
         S = new bool[3]{false,false,false};
         timer = new float[4]{0.0f,0.0f,0.0f,0.0f};
@@ -149,16 +149,16 @@ public class Status : MonoBehaviour
 
     void Electrification()
     {
-        if (!S[2])
+        if (!priod)
         {
             gameObject.GetComponent<enemy>().GetStun();
+            priod = true;
         }
 
         S[2] = true;
         count = 3;
         timer[3] = 0.7f;
         timer[2] = 0.1f;
-        priod = true;
     }
     
 }

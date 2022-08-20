@@ -8,7 +8,7 @@ using System.IO;
 
 public class enemy : MonoBehaviour
 {
-    private float speed = 1f;
+    public float speed = 1f;
     public float Armor;
     private int checkpoint = 0;
     private Vector3 startPosition;
