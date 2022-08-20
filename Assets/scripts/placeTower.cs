@@ -11,6 +11,7 @@ public class placeTower : MonoBehaviour
     public GameObject watertower;
     public GameObject electower;
     public GameObject panel;
+    public GameObject Upgradepanel;
 
     private GameObject Tower;
     // Start is called before the first frame update
@@ -52,9 +53,10 @@ public class placeTower : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if(CanPlaceTower())
+        if(CanPlaceTower() && !panel.activeSelf)
         {
             GameObject child;
+            panel.transform.position = gameObject.transform.position;
             ShowPanel(panel);
             GameObject test = gameObject.GetComponent<placeTower>().panel;
             child = test.transform.GetChild(0).gameObject;
@@ -82,7 +84,25 @@ public class placeTower : MonoBehaviour
                 HidePanel(panel);
             });
         }
-        else if(CanUpgrade())
+        else if(CanUpgrade()&& !Upgradepanel.activeSelf)
+        {
+            GameObject child;
+            Upgradepanel.transform.position = gameObject.transform.position;
+            ShowPanel(Upgradepanel);
+            child = Upgradepanel.transform.GetChild(0).gameObject;
+            child.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                Tower.GetComponent<tower>().IncreaseLevel();
+                HidePanel(Upgradepanel);
+            });
+            child = Upgradepanel.transform.GetChild(1).gameObject;
+            child.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                Destroy(Tower);
+                HidePanel(Upgradepanel);
+            });
+        }
+        else if (!CanUpgrade() && !CanUpgrade() && !Upgradepanel.activeSelf)
         {
             
         }

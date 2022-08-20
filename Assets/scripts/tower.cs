@@ -14,11 +14,9 @@ public class Towerlevel
 public class tower : MonoBehaviour
 {
     public List<Towerlevel> levels;
-    private Towerlevel currentlevel;
+    public Towerlevel currentlevel;
     public GameObject type;
     public float AttackRange { get; set; }
-    public float AttackSpeed;
-    private float Attack { get; set; }
     public int element;
 
     
@@ -53,6 +51,11 @@ public class tower : MonoBehaviour
     public int GetCurrentLevel()
     {
         return levels.IndexOf(currentlevel);
+    }
+
+    public void IncreaseLevel()
+    {
+        currentlevel = levels[1];
     }
     
     void OnEnable()
