@@ -77,8 +77,8 @@ public class Shoot : MonoBehaviour
         GameObject bullet = towerData.type;
         Vector3 startPosition = gameObject.transform.position;
         Vector3 targetPosition = target.transform.position;
-        startPosition.z = bullet.transform.position.z;
-        targetPosition.z = bullet.transform.position.z;
+        startPosition.z = -1;
+        targetPosition.z = -1;
         GameObject newBullet = Instantiate(bullet);
         newBullet.transform.position = startPosition;
         Bullet bulletcomp = newBullet.GetComponent<Bullet>();

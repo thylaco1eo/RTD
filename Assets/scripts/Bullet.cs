@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
-        distance = Vector2.Distance(startPosition,targetPosition);
+        distance = Vector3.Distance(startPosition,targetPosition);
         
     }
 

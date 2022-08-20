@@ -1,0 +1,1542 @@
+fileFormatVersion: 2
+guid: 262ebc0cdb040254782029ec014d89c5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 539
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589c91355185eb14dba5d0c8a08b055e
+      internalID: -517015249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 543
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e26b23f6239f3545b382381b2ded393
+      internalID: -462865940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 522
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf5956e71875c74c907c0de27548a01
+      internalID: -1152564816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 541
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b799241d541e49248ab015379fdf8105
+      internalID: -1365812309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_4
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 543
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a0c860d24cb13489f811c66ffc4cda
+      internalID: -651334432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_5
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 523
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17368bc9c9bdf98408967a120fe16470
+      internalID: -1326142919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_6
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 518
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4166c0d2df13eee42b43261d5dc2648b
+      internalID: -637947650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_7
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 539
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea8b304ca8dcd54aa9fd633190e7826
+      internalID: -126704267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_8
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 515
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41e13d09e27b5941a628de8868527d6
+      internalID: -106744478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_9
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 515
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243bc351cbac02447901bb46fdc86618
+      internalID: 1288046522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_10
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 513
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d77f8fcc0b7dd4d8cc8650e9cb0082
+      internalID: 1130866392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_11
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 505
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc75fd00a0cf0fd4db85cc1e3e2f7f17
+      internalID: 746954385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_12
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 478
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f15a4c58b6c5f4a830d0efa22193f3
+      internalID: -1760479152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_13
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 503
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c650aef5f937f418e54c2c7373e99f
+      internalID: -1465565577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_14
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 502
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3820fd3971cab2849a3589c8d1d0bcf1
+      internalID: 1151631768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_15
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 511
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cced9b773a33f443ba7dcfc4e65bc3f
+      internalID: 22305613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_16
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 493
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406824ec908b2d64082ac8f445e8341a
+      internalID: 1969205393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 494
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d289b23e7396eac45a2235e0783acb59
+      internalID: -1174541984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_18
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 489
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd99b4e04e5d4e45a65ca4b53b52c01
+      internalID: 1046881018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_19
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 495
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b872444daf011aa44b3204b738b1b472
+      internalID: 1016821250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_20
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 480
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d67f7bad252b04ab80dafc9fef9ba6
+      internalID: 228989242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_21
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 495
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc73c4ae70f31174399a647c5afc9f2a
+      internalID: 1935305054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_22
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 500
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6d413361fbee8458e171de172a2fd9
+      internalID: 1184799185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_23
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 480
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf26c0fa23832954f950c0376b70a8c6
+      internalID: 493435784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_24
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 475
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc37dbb6d7f026241af519b5c70f546c
+      internalID: 267731431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_25
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 476
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f2fd0d609cd9d4c8a2d9391e76c385
+      internalID: -648977855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_26
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 483
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2938c54969236194197dc4a4fb93adb1
+      internalID: 1017316230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_27
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 489
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6e2eb354aceed4d971e553a2e27765
+      internalID: -605707515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_28
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 472
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c710fe5cf845bc34b831f6702f5fc463
+      internalID: -162908146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_29
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 473
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06cb8f792bf8214a97ca1209c3ad4a4
+      internalID: 1185573752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_30
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 473
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c43eff3ecf62942a0618d0fe8970cc
+      internalID: -1598915107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_31
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 445
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ac2f1ab033e5e4fbe9c80a4593b5cc
+      internalID: -896415329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_32
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 475
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae13b98bb0e09bc4682f175062cba8a2
+      internalID: 1346051857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_33
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 475
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1051e9cbb1719634d99081e04ba8b282
+      internalID: -1177014765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_34
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 475
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e429b3d95d4a743a2ca4edcc0a365b
+      internalID: -1043426618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_35
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 476
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84257dde7d1662419634b8175f4f53e
+      internalID: -1283145422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_36
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 464
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcaea504821b0164e84ad13ed6219834
+      internalID: -1051714294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_37
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 476
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee80c9308adb3341a7be446b5c4138d
+      internalID: -1811446371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_38
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 428
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3050f31abc4ad614c84791c3f97b54d7
+      internalID: -835656785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_39
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 441
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68964e360ccf714ba0671364897f83a
+      internalID: -1745940894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_40
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 441
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f82af375796fad458b865ee644654b6
+      internalID: -993549451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_41
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 433
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21a944a4f0ffd1438e9879836a03daf
+      internalID: -744850837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_42
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 447
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced4616c46c360445b390572b06abe86
+      internalID: 485194786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_43
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 453
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bfc5119151799246891cfdc08803350
+      internalID: 1972998283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_44
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 411
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8326b000163a124d941d0d523b520b3
+      internalID: 572205098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_45
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 411
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e8767bd225297498686b9afb1ba223
+      internalID: -1844533549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_46
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 404
+        width: 12
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e8d8d2b91292946a6ddb5c8f911a17
+      internalID: -365531169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_47
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 421
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e6ef3e2aa3e334c88ed9305b62643e
+      internalID: 244582250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_48
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 423
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36027c3bb62f1d2429eb3c0577b4ceb7
+      internalID: 408227809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_49
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 384
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb09096d7d588d34495285b48a9b81ff
+      internalID: 1631384900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_50
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 383
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8d4ea0bad9b3f418df7675dc805387
+      internalID: 1503144464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_51
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 393
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68941c7a07e4b494e9d13e5380728271
+      internalID: -855088944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_52
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 399
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb15ecf1cc46f244b2de0f8f2075982
+      internalID: 337085300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_53
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 249
+        width: 78
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054fabca679c6cb43b06824941b36242
+      internalID: -429551251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_54
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 242
+        width: 91
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bb06f6b9e93ff4b9cecf5c53db7f18
+      internalID: -401831863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_55
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 236
+        width: 103
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db743546ac7141478b4a361e1250c07
+      internalID: 1258907102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_56
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 229
+        width: 126
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3bd873e117746f42b43619c5b737868
+      internalID: -33750790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_57
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 222
+        width: 148
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4fcc40200f88d4a9ad2045d5ae38f6
+      internalID: -2041624337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_58
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 24
+        width: 159
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35b0486aef59844daaebf7053a3add8
+      internalID: -1630054520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_59
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 17
+        width: 170
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339282375133e054698c95bde50e36d5
+      internalID: -2067617982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_60
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 155
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088cdb877ce42e240977ab7b95b1d9be
+      internalID: 2002577366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_61
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 11
+        width: 162
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283125d6e7db53641b94745bfd9f6d6a
+      internalID: -267589186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_62
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 26
+        width: 162
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8a26f899fa7a941825c779536623b1
+      internalID: -517972883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - RPG Maker MV - Ice 1_63
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 52
+        width: 56
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b025daaaed515468edd84617465dd1
+      internalID: -499210058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - RPG Maker MV - Ice 1_9: 1288046522
+      PC Computer - RPG Maker MV - Ice 1_13: -1465565577
+      PC Computer - RPG Maker MV - Ice 1_22: 1184799185
+      PC Computer - RPG Maker MV - Ice 1_52: 337085300
+      PC Computer - RPG Maker MV - Ice 1_35: -1283145422
+      PC Computer - RPG Maker MV - Ice 1_43: 1972998283
+      PC Computer - RPG Maker MV - Ice 1_4: -651334432
+      PC Computer - RPG Maker MV - Ice 1_6: -637947650
+      PC Computer - RPG Maker MV - Ice 1_63: -499210058
+      PC Computer - RPG Maker MV - Ice 1_18: 1046881018
+      PC Computer - RPG Maker MV - Ice 1_32: 1346051857
+      PC Computer - RPG Maker MV - Ice 1_11: 746954385
+      PC Computer - RPG Maker MV - Ice 1_26: 1017316230
+      PC Computer - RPG Maker MV - Ice 1_25: -648977855
+      PC Computer - RPG Maker MV - Ice 1_53: -429551251
+      PC Computer - RPG Maker MV - Ice 1_12: -1760479152
+      PC Computer - RPG Maker MV - Ice 1_36: -1051714294
+      PC Computer - RPG Maker MV - Ice 1_56: -33750790
+      PC Computer - RPG Maker MV - Ice 1_51: -855088944
+      PC Computer - RPG Maker MV - Ice 1_39: -1745940894
+      PC Computer - RPG Maker MV - Ice 1_7: -126704267
+      PC Computer - RPG Maker MV - Ice 1_44: 572205098
+      PC Computer - RPG Maker MV - Ice 1_0: -517015249
+      PC Computer - RPG Maker MV - Ice 1_28: -162908146
+      PC Computer - RPG Maker MV - Ice 1_15: 22305613
+      PC Computer - RPG Maker MV - Ice 1_59: -2067617982
+      PC Computer - RPG Maker MV - Ice 1_29: 1185573752
+      PC Computer - RPG Maker MV - Ice 1_24: 267731431
+      PC Computer - RPG Maker MV - Ice 1_33: -1177014765
+      PC Computer - RPG Maker MV - Ice 1_37: -1811446371
+      PC Computer - RPG Maker MV - Ice 1_40: -993549451
+      PC Computer - RPG Maker MV - Ice 1_47: 244582250
+      PC Computer - RPG Maker MV - Ice 1_5: -1326142919
+      PC Computer - RPG Maker MV - Ice 1_61: -267589186
+      PC Computer - RPG Maker MV - Ice 1_1: -462865940
+      PC Computer - RPG Maker MV - Ice 1_45: -1844533549
+      PC Computer - RPG Maker MV - Ice 1_46: -365531169
+      PC Computer - RPG Maker MV - Ice 1_55: 1258907102
+      PC Computer - RPG Maker MV - Ice 1_60: 2002577366
+      PC Computer - RPG Maker MV - Ice 1_16: 1969205393
+      PC Computer - RPG Maker MV - Ice 1_42: 485194786
+      PC Computer - RPG Maker MV - Ice 1_49: 1631384900
+      PC Computer - RPG Maker MV - Ice 1_3: -1365812309
+      PC Computer - RPG Maker MV - Ice 1_14: 1151631768
+      PC Computer - RPG Maker MV - Ice 1_58: -1630054520
+      PC Computer - RPG Maker MV - Ice 1_54: -401831863
+      PC Computer - RPG Maker MV - Ice 1_23: 493435784
+      PC Computer - RPG Maker MV - Ice 1_8: -106744478
+      PC Computer - RPG Maker MV - Ice 1_34: -1043426618
+      PC Computer - RPG Maker MV - Ice 1_57: -2041624337
+      PC Computer - RPG Maker MV - Ice 1_48: 408227809
+      PC Computer - RPG Maker MV - Ice 1_31: -896415329
+      PC Computer - RPG Maker MV - Ice 1_17: -1174541984
+      PC Computer - RPG Maker MV - Ice 1_20: 228989242
+      PC Computer - RPG Maker MV - Ice 1_38: -835656785
+      PC Computer - RPG Maker MV - Ice 1_50: 1503144464
+      PC Computer - RPG Maker MV - Ice 1_41: -744850837
+      PC Computer - RPG Maker MV - Ice 1_2: -1152564816
+      PC Computer - RPG Maker MV - Ice 1_21: 1935305054
+      PC Computer - RPG Maker MV - Ice 1_30: -1598915107
+      PC Computer - RPG Maker MV - Ice 1_10: 1130866392
+      PC Computer - RPG Maker MV - Ice 1_62: -517972883
+      PC Computer - RPG Maker MV - Ice 1_27: -605707515
+      PC Computer - RPG Maker MV - Ice 1_19: 1016821250
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

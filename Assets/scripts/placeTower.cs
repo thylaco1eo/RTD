@@ -21,6 +21,7 @@ public class placeTower : MonoBehaviour
         instance = this;
     }
 
+    private GameManagerBehaviour gameManager;
     public GameObject firetower;
     public GameObject icetower;
     public GameObject watertower;
@@ -60,10 +61,11 @@ public class placeTower : MonoBehaviour
         if(CanPlaceTower() && !panel.activeSelf)
         {
             GameObject child;
-            panel.transform.position = gameObject.transform.position;
             panel.SetActive(true);
-            GameObject test = gameObject.GetComponent<placeTower>().panel;
+            panel.transform.GetChild(1).transform.position = gameObject.transform.position;
+            GameObject test = gameObject.GetComponent<placeTower>().panel.transform.GetChild(1).gameObject;
             child = test.transform.GetChild(0).gameObject;
+            child.GetComponent<Button>().onClick.RemoveAllListeners();
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
                 Tower = (GameObject)Instantiate(firetower, transform.position, Quaternion.identity);
@@ -91,15 +93,16 @@ public class placeTower : MonoBehaviour
         else if(CanUpgrade()&& !Upgradepanel.activeSelf)
         {
             GameObject child;
-            Upgradepanel.transform.position = gameObject.transform.position;
             Upgradepanel.SetActive(true);
-            child = Upgradepanel.transform.GetChild(0).gameObject;
+            Upgradepanel.transform.GetChild(1).transform.position = gameObject.transform.position;
+            child = Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
+            child.GetComponent<Button>().onClick.RemoveAllListeners();
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
                 Tower.GetComponent<tower>().IncreaseLevel();
                 Upgradepanel.SetActive(false);
             });
-            child = Upgradepanel.transform.GetChild(1).gameObject;
+            child = Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
                 Destroy(Tower);
@@ -110,5 +113,10 @@ public class placeTower : MonoBehaviour
         {
             
         }
+    }
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
     }
 }

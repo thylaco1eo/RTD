@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8901758541837808791}
   - component: {fileID: -4349982576700286796}
   - component: {fileID: -1318037680071169932}
+  - component: {fileID: 972448414}
   m_Layer: 0
   m_Name: placeholder
   m_TagString: Untagged
@@ -97,18 +98,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492aa62f320524a49bcd5a60ca616c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TowerPrefab: {fileID: 0}
-  showCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  hidCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  Animationspeed: 2
-  panel: {fileID: 0}
+  firetower: {fileID: 5848503586221736861, guid: bd101134d96729b20a33f03115715ed1, type: 3}
+  icetower: {fileID: 5848503586221736861, guid: bf05318bd29b1d24e9c84b384fef00fe, type: 3}
+  watertower: {fileID: 5848503586221736861, guid: e2939be71963a3449a05553c73aa124c, type: 3}
+  electower: {fileID: 5848503586221736861, guid: 95e56b4360a591644b8cc832266f5ec3, type: 3}
+  panel: {fileID: 6048735467418102561, guid: 63943184c480609428aed219c162a2ea, type: 3}
+  Upgradepanel: {fileID: 3106513876861181331, guid: abf3626c5c5bc9a47b69b39f8353285d, type: 3}
+--- !u!61 &972448414
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2627879005321540713}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.48, y: 0.48}
+    newSize: {x: 0.48, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.48, y: 0.48}
+  m_EdgeRadius: 0

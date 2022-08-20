@@ -158,6 +158,7 @@ public class Status : MonoBehaviour
         count = 3;
         timer[3] = 0.7f;
         timer[2] = 0.1f;
+        priod = true;
     }
     
 }

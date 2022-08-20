@@ -37,7 +37,7 @@ public class enemy : MonoBehaviour
         Vector3 endPosition = map [checkpoint + 1].transform.position;
         float pathLength = Vector3.Distance (startPosition, endPosition);
         float totalTimeForPath = pathLength /speed;
-        gameObject.transform.position = Vector2.Lerp (startPosition, endPosition, Time.deltaTime / totalTimeForPath);
+        gameObject.transform.position = Vector3.Lerp (startPosition, endPosition, Time.deltaTime / totalTimeForPath);
         startPosition = gameObject.transform.position;
         if (gameObject.transform.position.Equals(endPosition))
         {
@@ -48,6 +48,8 @@ public class enemy : MonoBehaviour
             else
             {
                 Destroy(gameObject);
+                GameManagerBehaviour gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
+                gameManager.Health -= 10;
             }
         }
     }
