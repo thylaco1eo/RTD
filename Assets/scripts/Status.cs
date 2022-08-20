@@ -123,7 +123,17 @@ public class Status : MonoBehaviour
 
     void Explosion()
     {
-        
+        Collider2D[] hit = Physics2D.OverlapCircleAll(gameObject.transform.position,2);
+        if (hit.Length != 0)
+        {
+            for (int i = 0; i < hit.Length; i++)
+            {
+                if (hit[i].gameObject.tag.Equals("Enemy"))
+                {
+                    hit[i].gameObject.GetComponent<enemy>().KnockedBack(gameObject.transform.position);
+                }
+            }
+        }
     }
 
     void Melt()

@@ -68,26 +68,30 @@ public class placeTower : MonoBehaviour
             child.GetComponent<Button>().onClick.RemoveAllListeners();
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
-                Tower = (GameObject)Instantiate(firetower, transform.position, Quaternion.identity);
+                Tower = (GameObject)Instantiate(firetower, transform.position+Vector3.back, Quaternion.identity);
                 panel.SetActive(false);
+                child.GetComponent<Button>().onClick.RemoveAllListeners();
             });
             child = test.transform.GetChild(1).gameObject;
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
-                Tower = (GameObject)Instantiate(icetower, transform.position, Quaternion.identity);
+                Tower = (GameObject)Instantiate(icetower, transform.position+Vector3.back, Quaternion.identity);
                 panel.SetActive(false);
+                child.GetComponent<Button>().onClick.RemoveAllListeners();
             });
             child = test.transform.GetChild(2).gameObject;
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
-                Tower = (GameObject)Instantiate(watertower, transform.position, Quaternion.identity);
+                Tower = (GameObject)Instantiate(watertower, transform.position+Vector3.back, Quaternion.identity);
                 panel.SetActive(false);
+                child.GetComponent<Button>().onClick.RemoveAllListeners();
             });
             child = test.transform.GetChild(3).gameObject;
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
-                Tower = (GameObject)Instantiate(electower, transform.position, Quaternion.identity);
+                Tower = (GameObject)Instantiate(electower, transform.position+Vector3.back, Quaternion.identity);
                 panel.SetActive(false);
+                child.GetComponent<Button>().onClick.RemoveAllListeners();
             });
         }
         else if(CanUpgrade()&& !Upgradepanel.activeSelf)

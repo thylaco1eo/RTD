@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8901758541837808791, guid: 20ec64c2c3b39644dbf34acc0cb9580b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8901758541837808791, guid: 20ec64c2c3b39644dbf34acc0cb9580b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -221,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8901758541837808791, guid: 20ec64c2c3b39644dbf34acc0cb9580b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8901758541837808791, guid: 20ec64c2c3b39644dbf34acc0cb9580b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -809,7 +809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8901758541837808791, guid: 20ec64c2c3b39644dbf34acc0cb9580b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8901758541837808791, guid: 20ec64c2c3b39644dbf34acc0cb9580b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -874,7 +874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8901758541837808791, guid: 20ec64c2c3b39644dbf34acc0cb9580b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8901758541837808791, guid: 20ec64c2c3b39644dbf34acc0cb9580b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1240,7 +1240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8901758541837808791, guid: 20ec64c2c3b39644dbf34acc0cb9580b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8901758541837808791, guid: 20ec64c2c3b39644dbf34acc0cb9580b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1459,8 +1459,8 @@ MonoBehaviour:
   - {fileID: 921537468}
   waves:
   - enemyPrefab: {fileID: 2458120099464965054, guid: 797feb127de17917a8861b6b942ebd5e, type: 3}
-    spawnInterval: 0
-    maxEnemies: 1
+    spawnInterval: 1
+    maxEnemies: 2
 --- !u!1001 &2002316762
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using LitJson;
 using System.IO;
+using Unity.VisualScripting;
 
 
 public class enemy : MonoBehaviour
@@ -17,6 +19,7 @@ public class enemy : MonoBehaviour
     void Start()
     {
         startPosition = map[checkpoint].transform.position;
+        RotateIntoMoveDirection();
         //ReadMap("./Assets/data/map.json");
     }
 
@@ -44,6 +47,7 @@ public class enemy : MonoBehaviour
             if (checkpoint < map.Length - 2)
             {
                 checkpoint++;
+                RotateIntoMoveDirection();
             }
             else
             {
@@ -52,6 +56,20 @@ public class enemy : MonoBehaviour
                 gameManager.Health -= 10;
             }
         }
+    }
+    
+    private void RotateIntoMoveDirection()
+    {
+        //1
+        Vector3 newStartPosition = map [checkpoint].transform.position;
+        Vector3 newEndPosition = map [checkpoint + 1].transform.position;
+        Vector3 newDirection = (newEndPosition - newStartPosition);
+        //2
+        float x = newDirection.x;
+        float y = newDirection.y;
+        float rotationAngle = Mathf.Atan2 (y, x) * 180 / Mathf.PI;
+        //3
+        gameObject.transform.rotation = Quaternion.AngleAxis(rotationAngle+90, Vector3.forward);
     }
 
     public float DistancetoGoal()
@@ -63,6 +81,13 @@ public class enemy : MonoBehaviour
             distance += Vector2.Distance(map[i].transform.position, map[i+1].transform.position);
         }
         return distance;
+    }
+
+    public void KnockedBack(Vector3 source)
+    {
+        Vector3 direction = (map[checkpoint+1].transform.position-startPosition).normalized;
+        Vector3 distance = Vector3.Dot(direction, (gameObject.transform.position-source).normalized) * direction;
+        startPosition += distance*0.2f;
     }
 
     public void freeze()
