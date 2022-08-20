@@ -5,20 +5,11 @@ using UnityEngine.EventSystems;
 
 public class ClickHandler : MonoBehaviour, IPointerClickHandler
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnPointerClick(PointerEventData eventData)
     {
-        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        if (gameObject.transform.GetChild(1).gameObject.activeSelf)
+        {
+            gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        }
     }
 }

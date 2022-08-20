@@ -6,6 +6,21 @@ using UnityEngine.UI;
 
 public class placeTower : MonoBehaviour
 {
+    private static placeTower instance;
+
+    public static placeTower Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public GameObject firetower;
     public GameObject icetower;
     public GameObject watertower;
@@ -14,18 +29,7 @@ public class placeTower : MonoBehaviour
     public GameObject Upgradepanel;
 
     private GameObject Tower;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+  
     private bool CanPlaceTower()
     {
         return Tower == null;
@@ -109,12 +113,12 @@ public class placeTower : MonoBehaviour
     }
     
 
-    void ShowPanel(GameObject gameObject)
+    public void ShowPanel(GameObject gameObject)
     {
         gameObject.SetActive(true);
     }
 
-    void HidePanel(GameObject gameObject)
+    public void HidePanel(GameObject gameObject)
     {
         gameObject.SetActive(false);
     }
