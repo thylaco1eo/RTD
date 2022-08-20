@@ -61,65 +61,54 @@ public class placeTower : MonoBehaviour
         {
             GameObject child;
             panel.transform.position = gameObject.transform.position;
-            ShowPanel(panel);
+            panel.SetActive(true);
             GameObject test = gameObject.GetComponent<placeTower>().panel;
             child = test.transform.GetChild(0).gameObject;
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
                 Tower = (GameObject)Instantiate(firetower, transform.position, Quaternion.identity);
-                HidePanel(panel);
+                panel.SetActive(false);
             });
             child = test.transform.GetChild(1).gameObject;
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
                 Tower = (GameObject)Instantiate(icetower, transform.position, Quaternion.identity);
-                HidePanel(panel);
+                panel.SetActive(false);
             });
             child = test.transform.GetChild(2).gameObject;
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
                 Tower = (GameObject)Instantiate(watertower, transform.position, Quaternion.identity);
-                HidePanel(panel);
+                panel.SetActive(false);
             });
             child = test.transform.GetChild(3).gameObject;
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
                 Tower = (GameObject)Instantiate(electower, transform.position, Quaternion.identity);
-                HidePanel(panel);
+                panel.SetActive(false);
             });
         }
         else if(CanUpgrade()&& !Upgradepanel.activeSelf)
         {
             GameObject child;
             Upgradepanel.transform.position = gameObject.transform.position;
-            ShowPanel(Upgradepanel);
+            Upgradepanel.SetActive(true);
             child = Upgradepanel.transform.GetChild(0).gameObject;
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
                 Tower.GetComponent<tower>().IncreaseLevel();
-                HidePanel(Upgradepanel);
+                Upgradepanel.SetActive(false);
             });
             child = Upgradepanel.transform.GetChild(1).gameObject;
             child.GetComponent<Button>().onClick.AddListener(() =>
             {
                 Destroy(Tower);
-                HidePanel(Upgradepanel);
+                Upgradepanel.SetActive(false);
             });
         }
         else if (!CanUpgrade() && !CanUpgrade() && !Upgradepanel.activeSelf)
         {
             
         }
-    }
-    
-
-    public void ShowPanel(GameObject gameObject)
-    {
-        gameObject.SetActive(true);
-    }
-
-    public void HidePanel(GameObject gameObject)
-    {
-        gameObject.SetActive(false);
     }
 }

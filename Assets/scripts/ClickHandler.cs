@@ -11,5 +11,10 @@ public class ClickHandler : MonoBehaviour, IPointerClickHandler
         {
             gameObject.transform.GetChild(1).gameObject.SetActive(false);
         }
+
+        if (gameObject.transform.GetChild(2).gameObject.activeSelf)
+        {
+            gameObject.transform.GetChild(2).gameObject.SetActive(false);
+        }
     }
 }
