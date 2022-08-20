@@ -37,12 +37,16 @@ public class placeTower : MonoBehaviour
             int level = Tower.GetComponent<tower>().GetCurrentLevel();
             if (level == 1)
             {
-                return false
+                return false;
             }
             else
             {
                 return true;
             }
+        }
+        else
+        {
+            return false;
         }
     }
 
