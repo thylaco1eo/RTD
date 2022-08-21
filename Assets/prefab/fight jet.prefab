@@ -323,12 +323,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fb5c7d7a6e87cad92ad7db09c19120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  Armor: 10
+  speed: 2
+  Armor: 3
   map:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  value: 40
 --- !u!58 &-4557458872582225461
 CircleCollider2D:
   m_ObjectHideFlags: 0

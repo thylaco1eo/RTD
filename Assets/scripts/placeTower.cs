@@ -60,62 +60,91 @@ public class placeTower : MonoBehaviour
     {
         if(CanPlaceTower() && !panel.activeSelf)
         {
-            GameObject child;
+            GameObject[] child = new GameObject[4];
             panel.SetActive(true);
             panel.transform.GetChild(1).transform.position = gameObject.transform.position;
             GameObject test = gameObject.GetComponent<placeTower>().panel.transform.GetChild(1).gameObject;
-            child = test.transform.GetChild(0).gameObject;
-            child.GetComponent<Button>().onClick.RemoveAllListeners();
-            child.GetComponent<Button>().onClick.AddListener(() =>
+            child[0] = test.transform.GetChild(0).gameObject;
+            child[0].GetComponent<Button>().onClick.RemoveAllListeners();
+            child[0].GetComponent<Button>().onClick.AddListener(() =>
             {
-                Tower = (GameObject)Instantiate(firetower, transform.position+Vector3.back, Quaternion.identity);
-                panel.SetActive(false);
-                child.GetComponent<Button>().onClick.RemoveAllListeners();
+                if (gameManager.Gold >= firetower.GetComponent<tower>().levels[0].cost)
+                {
+                    gameManager.Gold -= firetower.GetComponent<tower>().levels[0].cost;
+                    Tower = (GameObject)Instantiate(firetower, transform.position+Vector3.back, Quaternion.identity);
+                    panel.SetActive(false);
+                }
             });
-            child = test.transform.GetChild(1).gameObject;
-            child.GetComponent<Button>().onClick.AddListener(() =>
+            child[1] = test.transform.GetChild(1).gameObject;
+            child[1].GetComponent<Button>().onClick.RemoveAllListeners();
+            child[1].GetComponent<Button>().onClick.AddListener(() =>
             {
-                Tower = (GameObject)Instantiate(icetower, transform.position+Vector3.back, Quaternion.identity);
-                panel.SetActive(false);
-                child.GetComponent<Button>().onClick.RemoveAllListeners();
+                if (gameManager.Gold >= icetower.GetComponent<tower>().levels[0].cost){
+                    gameManager.Gold -= icetower.GetComponent<tower>().levels[0].cost;
+                    Tower = (GameObject)Instantiate(icetower, transform.position + Vector3.back, Quaternion.identity);
+                    panel.SetActive(false);
+                }
             });
-            child = test.transform.GetChild(2).gameObject;
-            child.GetComponent<Button>().onClick.AddListener(() =>
+            child[2] = test.transform.GetChild(2).gameObject;
+            child[2].GetComponent<Button>().onClick.RemoveAllListeners();
+            child[2].GetComponent<Button>().onClick.AddListener(() =>
             {
-                Tower = (GameObject)Instantiate(watertower, transform.position+Vector3.back, Quaternion.identity);
-                panel.SetActive(false);
-                child.GetComponent<Button>().onClick.RemoveAllListeners();
+                if (gameManager.Gold >= watertower.GetComponent<tower>().levels[0].cost){
+                    gameManager.Gold -= watertower.GetComponent<tower>().levels[0].cost;
+                    Tower = (GameObject)Instantiate(watertower, transform.position + Vector3.back, Quaternion.identity);
+                    panel.SetActive(false);
+                }
             });
-            child = test.transform.GetChild(3).gameObject;
-            child.GetComponent<Button>().onClick.AddListener(() =>
+            child[3] = test.transform.GetChild(3).gameObject;
+            child[3].GetComponent<Button>().onClick.RemoveAllListeners();
+            child[3].GetComponent<Button>().onClick.AddListener(() =>
             {
-                Tower = (GameObject)Instantiate(electower, transform.position+Vector3.back, Quaternion.identity);
-                panel.SetActive(false);
-                child.GetComponent<Button>().onClick.RemoveAllListeners();
+                if (gameManager.Gold >= electower.GetComponent<tower>().levels[0].cost){
+                    gameManager.Gold -= electower.GetComponent<tower>().levels[0].cost;
+                    Tower = (GameObject)Instantiate(electower, transform.position + Vector3.back, Quaternion.identity);
+                    panel.SetActive(false);
+                }
             });
         }
         else if(CanUpgrade()&& !Upgradepanel.activeSelf)
         {
-            GameObject child;
+            GameObject[] child = new GameObject[2];
             Upgradepanel.SetActive(true);
             Upgradepanel.transform.GetChild(1).transform.position = gameObject.transform.position;
-            child = Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
-            child.GetComponent<Button>().onClick.RemoveAllListeners();
-            child.GetComponent<Button>().onClick.AddListener(() =>
+            child[0] = Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
+            child[0].GetComponent<Button>().onClick.RemoveAllListeners();
+            child[0].GetComponent<Button>().onClick.AddListener(() =>
             {
-                Tower.GetComponent<tower>().IncreaseLevel();
-                Upgradepanel.SetActive(false);
+                if(gameManager.Gold >= Tower.GetComponent<tower>().levels[1].cost)
+                {
+                    gameManager.Gold -= Tower.GetComponent<tower>().levels[1].cost;
+                    Tower.GetComponent<tower>().IncreaseLevel();
+                    Upgradepanel.SetActive(false);
+                }
             });
-            child = Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
-            child.GetComponent<Button>().onClick.AddListener(() =>
+            child[1] = Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
+            child[1].GetComponent<Button>().onClick.RemoveAllListeners();
+            child[1].GetComponent<Button>().onClick.AddListener(() =>
             {
+                gameManager.Gold += Tower.GetComponent<tower>().currentlevel.cost -50;
                 Destroy(Tower);
                 Upgradepanel.SetActive(false);
             });
         }
         else if (!CanUpgrade() && !CanUpgrade() && !Upgradepanel.activeSelf)
         {
-            
+            GameObject child;
+            Upgradepanel.SetActive(true);
+            Upgradepanel.transform.GetChild(1).transform.position = gameObject.transform.position;
+            child = Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
+            child.GetComponent<Button>().onClick.RemoveAllListeners();
+            child.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                gameManager.Gold += Tower.GetComponent<tower>().currentlevel.cost -50;
+                Destroy(Tower);
+                Upgradepanel.SetActive(false);
+            });
+
         }
     }
 

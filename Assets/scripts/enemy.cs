@@ -15,6 +15,8 @@ public class enemy : MonoBehaviour
     private int checkpoint = 0;
     private Vector3 startPosition;
     public GameObject[] map;
+
+    public int value;
     // Start is called before the first frame update
     void Start()
     {

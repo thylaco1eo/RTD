@@ -15,17 +15,17 @@ public class mapcell : MonoBehaviour
         {
             case 0: path = "image/tileGrass1";
                 break;
-            case 1: path = "image/tileSand_roadEast";
+            case 1: path = "image/tileGrass_roadEast";
                 break;
-            case 2: path = "image/tileSand_roadNorth";
+            case 2: path = "image/tileGrass_roadNorth";
                 break;
-            case 3: path = "image/tileSand_roadCornerLL";
+            case 3: path = "image/tileGrass_roadCornerLL";
                 break;
-            case 4: path = "image/tileSand_roadCornerLR";
+            case 4: path = "image/tileGrass_roadCornerLR";
                 break;
-            case 5: path = "image/tileSand_roadCornerUL";
+            case 5: path = "image/tileGrass_roadCornerUL";
                 break;
-            case 6: path = "image/tileSand_roadCornerUR";
+            case 6: path = "image/tileGrass_roadCornerUR";
                 break;
         }
         

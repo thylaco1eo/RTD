@@ -123,6 +123,8 @@ public class Status : MonoBehaviour
 
     void Explosion()
     {
+        AudioSource[] sound = gameObject.GetComponents<AudioSource>();
+        sound[0].PlayOneShot(sound[0].clip);
         Collider2D[] hit = Physics2D.OverlapCircleAll(gameObject.transform.position,2);
         if (hit.Length != 0)
         {

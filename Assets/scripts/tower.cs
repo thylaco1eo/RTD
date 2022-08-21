@@ -7,7 +7,6 @@ using UnityEngine;
 public class Towerlevel
 {
     public int cost;
-    public GameObject visual;
     public int damage;
     public float AttackSpeed;
 }
@@ -43,8 +42,6 @@ public class tower : MonoBehaviour
         {
             currentlevel = value;
             int currentlevelindex = levels.IndexOf(currentlevel);
-            levels[1-currentlevelindex].visual.SetActive(false);
-            levels[currentlevelindex].visual.SetActive(true);
         }
     }
 
@@ -55,6 +52,7 @@ public class tower : MonoBehaviour
 
     public void IncreaseLevel()
     {
+        gameObject.transform.localScale = gameObject.transform.localScale * 1.5f;
         currentlevel = levels[1];
     }
     

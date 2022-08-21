@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     public Vector3 startPosition;
     public Vector3 targetPosition;
     public int type;
+    private GameManagerBehaviour gameManager;
 
     private float distance;
     private float startTime;
@@ -18,6 +19,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
         startTime = Time.time;
         distance = Vector3.Distance(startPosition,targetPosition);
         
@@ -42,6 +44,7 @@ public class Bullet : MonoBehaviour
                 if (healthBar.currentHealth <= 0)
                 {
                     Destroy(target);
+                    gameManager.Gold += target.GetComponent<enemy>().value;
                 }
             }
             Destroy(gameObject);
