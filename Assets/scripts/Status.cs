@@ -59,6 +59,9 @@ public class Status : MonoBehaviour
             }
             else if (S[2] && !priod && timer[3] - Time.deltaTime <= 0)
             {
+                AudioSource[] sound = gameObject.GetComponents<AudioSource>();
+                sound[2].volume = 0.3f;
+                sound[2].PlayOneShot(sound[2].clip);
                 gameObject.GetComponent<enemy>().GetStun();
                 timer[2] = 0.1f;
                 priod = true;
@@ -115,6 +118,9 @@ public class Status : MonoBehaviour
     {
         if (!S[0])
         {
+            AudioSource[] sound = gameObject.GetComponents<AudioSource>();
+            sound[1].volume = 0.3f;
+            sound[1].PlayOneShot(sound[1].clip);
             gameObject.GetComponent<enemy>().freeze();
         }
         timer[0] = 2.0f;
@@ -124,6 +130,7 @@ public class Status : MonoBehaviour
     void Explosion()
     {
         AudioSource[] sound = gameObject.GetComponents<AudioSource>();
+        sound[0].volume = 0.3f;
         sound[0].PlayOneShot(sound[0].clip);
         Collider2D[] hit = Physics2D.OverlapCircleAll(gameObject.transform.position,2);
         if (hit.Length != 0)
@@ -145,7 +152,9 @@ public class Status : MonoBehaviour
 
     void Evaporation()
     {
-        
+        AudioSource[] sound = gameObject.GetComponents<AudioSource>();
+        sound[3].volume = 0.3f;
+        sound[3].PlayOneShot(sound[3].clip);
     }
 
     void Superconduction()
@@ -163,6 +172,9 @@ public class Status : MonoBehaviour
     {
         if (!priod)
         {
+            AudioSource[] sound = gameObject.GetComponents<AudioSource>();
+            sound[2].volume = 0.3f;
+            sound[2].PlayOneShot(sound[2].clip);
             gameObject.GetComponent<enemy>().GetStun();
             priod = true;
         }
