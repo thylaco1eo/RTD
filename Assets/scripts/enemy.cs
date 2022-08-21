@@ -70,7 +70,7 @@ public class enemy : MonoBehaviour
         float rotationAngle = Mathf.Atan2 (y, x) * 180 / Mathf.PI;
         //3
         GameObject sprite = gameObject.transform.Find("Sprite").gameObject;
-        sprite.transform.rotation = Quaternion.AngleAxis(rotationAngle, Vector3.forward);
+        sprite.transform.rotation = Quaternion.AngleAxis(rotationAngle-90, Vector3.forward);
     }
 
     public float DistancetoGoal()
