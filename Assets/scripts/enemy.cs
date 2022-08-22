@@ -5,6 +5,7 @@ using System.Threading;
 using UnityEngine;
 using LitJson;
 using System.IO;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 
 
@@ -20,6 +21,7 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.transform.position = new Vector3(15, 0, 5);
         startPosition = map[checkpoint].transform.position;
         RotateIntoMoveDirection();
         //ReadMap("./Assets/data/map.json");
@@ -55,7 +57,7 @@ public class enemy : MonoBehaviour
             {
                 Destroy(gameObject);
                 GameManagerBehaviour gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
-                gameManager.Health -= 10;
+                gameManager.Health = math.max(0, gameManager.Health - 10);
             }
         }
     }

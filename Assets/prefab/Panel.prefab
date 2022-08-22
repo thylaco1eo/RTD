@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6048735466815276826}
   - component: {fileID: 6048735466815276825}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: electower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 041f9291f10320740b148192185d5483, type: 3}
+  m_Sprite: {fileID: 1931313701, guid: 20e6d90bc8548f948a9172398263b0b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 6048735466925574290}
   - component: {fileID: 6048735466925574289}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: icetower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 041f9291f10320740b148192185d5483, type: 3}
+  m_Sprite: {fileID: -517972883, guid: 262ebc0cdb040254782029ec014d89c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -337,7 +337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6048735467418102621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 6048735468678070168}
   - component: {fileID: 6048735468678070170}
   m_Layer: 5
-  m_Name: Image
+  m_Name: firetower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 041f9291f10320740b148192185d5483, type: 3}
+  m_Sprite: {fileID: -1469525895, guid: c103b69b4760a8b4bbd749858855b627, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 6048735468760014215}
   - component: {fileID: 6048735468760014214}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: watertower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 041f9291f10320740b148192185d5483, type: 3}
+  m_Sprite: {fileID: 230683353, guid: eb45d751f03fe82489b39b6af31bb044, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

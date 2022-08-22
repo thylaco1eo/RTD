@@ -29,12 +29,17 @@ public class spawnEnemy : MonoBehaviour
     void Update()
     {
         int currentWave = gameManager.Wave;
-        if (currentWave < waves.Length)
+        if (currentWave < waves.Length && !gameManager.gameOver)
         {
+            
             float timeInterval = Time.time - lastSpawnTime;
+            if (enemiesSpawned == 0 && timeInterval <= timeBetweenWaves)
+            {
+                gameManager.TimeBetweenSpawn = timeBetweenWaves - timeInterval;
+            }
             float spawnInterval = waves[currentWave].spawnInterval;
             if (((enemiesSpawned == 0 && timeInterval > timeBetweenWaves) ||
-                 timeInterval > spawnInterval) && 
+                 enemiesSpawned != 0 && timeInterval > spawnInterval) && 
                 enemiesSpawned < waves[currentWave].maxEnemies)
             {
                 lastSpawnTime = Time.time;
@@ -47,7 +52,6 @@ public class spawnEnemy : MonoBehaviour
                 GameObject.FindGameObjectWithTag("Enemy") == null)
             {
                 gameManager.Wave++;
-                gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
                 enemiesSpawned = 0;
                 lastSpawnTime = Time.time;
             }

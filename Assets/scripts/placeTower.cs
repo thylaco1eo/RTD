@@ -109,6 +109,8 @@ public class placeTower : MonoBehaviour
         else if(CanUpgrade()&& !Upgradepanel.activeSelf)
         {
             GameObject[] child = new GameObject[2];
+            Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(2).GetComponent<Text>().text = "-"+Tower.GetComponent<tower>().levels[1].cost;
+            Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(3).GetComponent<Text>().text = "+"+(Tower.GetComponent<tower>().currentlevel.cost -50);
             Upgradepanel.SetActive(true);
             Upgradepanel.transform.GetChild(1).transform.position = gameObject.transform.position;
             child[0] = Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject;
@@ -118,6 +120,7 @@ public class placeTower : MonoBehaviour
                 if(gameManager.Gold >= Tower.GetComponent<tower>().levels[1].cost)
                 {
                     gameManager.Gold -= Tower.GetComponent<tower>().levels[1].cost;
+                    child[0].GetComponent<Button>().onClick.RemoveAllListeners();
                     Tower.GetComponent<tower>().IncreaseLevel();
                     Upgradepanel.SetActive(false);
                 }
@@ -127,14 +130,18 @@ public class placeTower : MonoBehaviour
             child[1].GetComponent<Button>().onClick.AddListener(() =>
             {
                 gameManager.Gold += Tower.GetComponent<tower>().currentlevel.cost -50;
+                child[0].GetComponent<Button>().onClick.RemoveAllListeners();
                 Destroy(Tower);
                 Upgradepanel.SetActive(false);
             });
         }
-        else if (!CanUpgrade() && !CanUpgrade() && !Upgradepanel.activeSelf)
+        else if(!CanPlaceTower() && !CanUpgrade() && !Upgradepanel.activeSelf)
         {
             GameObject child;
+            Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(2).GetComponent<Text>().text = "Max";
+            Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(3).GetComponent<Text>().text = "+"+(Tower.GetComponent<tower>().currentlevel.cost -50);
             Upgradepanel.SetActive(true);
+            Upgradepanel.transform.GetChild(0).gameObject.SetActive(false);
             Upgradepanel.transform.GetChild(1).transform.position = gameObject.transform.position;
             child = Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
             child.GetComponent<Button>().onClick.RemoveAllListeners();
@@ -142,9 +149,9 @@ public class placeTower : MonoBehaviour
             {
                 gameManager.Gold += Tower.GetComponent<tower>().currentlevel.cost -50;
                 Destroy(Tower);
+                child.GetComponent<Button>().onClick.RemoveAllListeners();
                 Upgradepanel.SetActive(false);
             });
-
         }
     }
 
