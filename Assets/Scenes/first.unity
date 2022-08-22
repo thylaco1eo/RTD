@@ -989,8 +989,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.55, y: 200}
-  m_SizeDelta: {x: 149.09, y: 100}
+  m_AnchoredPosition: {x: -9.67, y: 200}
+  m_SizeDelta: {x: 80.66, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530998781
 MonoBehaviour:
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 04dee1670dd39e443b3804d492f670bf, type: 3}
     m_FontSize: 20
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -1162,8 +1162,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 326.31, y: 200}
-  m_SizeDelta: {x: 144.63, y: 100}
+  m_AnchoredPosition: {x: 295.07, y: 200}
+  m_SizeDelta: {x: 82.15, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685211921
 MonoBehaviour:
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 04dee1670dd39e443b3804d492f670bf, type: 3}
     m_FontSize: 20
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -1565,19 +1565,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1716175924958071439, guid: c40991e1733b9c64b81442b3dcb05f75, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 138.68
+      value: 117.85
       objectReference: {fileID: 0}
     - target: {fileID: 1716175924958071439, guid: c40991e1733b9c64b81442b3dcb05f75, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 40.49
+      value: 82.14
       objectReference: {fileID: 0}
     - target: {fileID: 1716175924958071439, guid: c40991e1733b9c64b81442b3dcb05f75, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -360.66
+      value: -371.07
       objectReference: {fileID: 0}
     - target: {fileID: 1716175924958071439, guid: c40991e1733b9c64b81442b3dcb05f75, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 229.75
+      value: 208.92
       objectReference: {fileID: 0}
     - target: {fileID: 1716175925056717162, guid: c40991e1733b9c64b81442b3dcb05f75, type: 3}
       propertyPath: m_Pivot.x
