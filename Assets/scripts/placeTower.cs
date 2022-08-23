@@ -141,7 +141,7 @@ public class placeTower : MonoBehaviour
             Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(2).GetComponent<Text>().text = "Max";
             Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(3).GetComponent<Text>().text = "+"+(Tower.GetComponent<tower>().currentlevel.cost -50);
             Upgradepanel.SetActive(true);
-            Upgradepanel.transform.GetChild(0).gameObject.SetActive(false);
+            Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.SetActive(false);
             Upgradepanel.transform.GetChild(1).transform.position = gameObject.transform.position;
             child = Upgradepanel.transform.GetChild(1).gameObject.transform.GetChild(1).gameObject;
             child.GetComponent<Button>().onClick.RemoveAllListeners();

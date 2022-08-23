@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManagerBehaviour : MonoBehaviour
 {
@@ -33,6 +34,14 @@ public class GameManagerBehaviour : MonoBehaviour
         if (basement.transform.GetChild(1).gameObject.GetComponent<HealthBar>().currentHealth <= 0)
         {
             gameOver = true;
+            GameObject gameEnd = (GameObject)Instantiate(Resources.Load("prefab/gameOver"));
+            GameObject Restart = gameEnd.transform.GetChild(0).gameObject;
+            Restart.GetComponent<Button>().onClick.RemoveAllListeners();
+            Restart.GetComponent<Button>().onClick.AddListener(()=>
+            {
+                Scene scene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(scene.name);
+            });
         }
     }
 
