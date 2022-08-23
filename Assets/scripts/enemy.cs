@@ -11,6 +11,7 @@ using Unity.VisualScripting;
 
 public class enemy : MonoBehaviour
 {
+    private GameManagerBehaviour gameManager;
     public float speed = 1f;
     public float Armor;
     private int checkpoint = 0;
@@ -21,6 +22,7 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
         gameObject.transform.position = new Vector3(15, 0, 5);
         startPosition = map[checkpoint].transform.position;
         RotateIntoMoveDirection();
@@ -30,6 +32,10 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameManager.gameOver)
+        {
+            return;
+        }
         Move();
     }
 

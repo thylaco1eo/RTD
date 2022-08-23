@@ -8,11 +8,13 @@ public class Shoot : MonoBehaviour
     private tower towerData;
 
     private float lastShoot;
+    private GameManagerBehaviour gameManager;
 
     public GameObject target = null;
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
         enemies = new List<GameObject>();
         lastShoot = Time.time;
         towerData = gameObject.GetComponentInChildren<tower>();
@@ -21,6 +23,10 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameManager.gameOver)
+        {
+            return;
+        }
         target = null;
         float minimalDistance = float.MaxValue;
         foreach (GameObject enemy in enemies)

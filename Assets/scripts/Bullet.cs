@@ -28,6 +28,10 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameManager.gameOver)
+        {
+            return;
+        }
         float travelTime = Time.time - startTime;
         gameObject.transform.position = Vector3.Lerp(startPosition, targetPosition, travelTime * speed/distance);
         if (gameObject.transform.position.Equals(targetPosition))

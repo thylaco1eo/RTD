@@ -31,18 +31,6 @@ public class GameManagerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (basement.transform.GetChild(1).gameObject.GetComponent<HealthBar>().currentHealth <= 0)
-        {
-            gameOver = true;
-            GameObject gameEnd = (GameObject)Instantiate(Resources.Load("prefab/gameOver"));
-            GameObject Restart = gameEnd.transform.GetChild(0).gameObject;
-            Restart.GetComponent<Button>().onClick.RemoveAllListeners();
-            Restart.GetComponent<Button>().onClick.AddListener(()=>
-            {
-                Scene scene = SceneManager.GetActiveScene();
-                SceneManager.LoadScene(scene.name);
-            });
-        }
     }
 
     public int MaxWave
@@ -115,8 +103,20 @@ public class GameManagerBehaviour : MonoBehaviour
             if ( health<= 0 && !gameOver)
             {
                 gameOver = true;
-                //GameObject gameOverText = GameObject.FindGameObjectWithTag("GameOver");
-                //gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
+                GameObject gameEnd = (GameObject)Instantiate(Resources.Load("prefab/gameOver"));
+                GameObject Restart = gameEnd.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+                Restart.GetComponent<Button>().onClick.RemoveAllListeners();
+                Restart.GetComponent<Button>().onClick.AddListener(()=>
+                {
+                    Scene scene = SceneManager.GetActiveScene();
+                    SceneManager.LoadScene(scene.name);
+                });
+                GameObject End = gameEnd.transform.GetChild(0).gameObject.transform.GetChild(1).gameObject;
+                End.GetComponent<Button>().onClick.RemoveAllListeners();
+                End.GetComponent<Button>().onClick.AddListener(()=>
+                {
+                    Application.Quit();
+                });
             }
         }
     }

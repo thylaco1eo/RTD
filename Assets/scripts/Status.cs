@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Status : MonoBehaviour
@@ -8,11 +9,13 @@ public class Status : MonoBehaviour
     private float[] timer;
     private int count = 0;
     private bool priod;
+    private GameManagerBehaviour gameManager;
 
     private bool[] S;
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
         priod = false;
         // freeze, Superconduction, Electrification
         S = new bool[3]{false,false,false};
@@ -22,6 +25,10 @@ public class Status : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameManager.gameOver)
+        {
+            return;
+        }
         if (S[0] && timer[0] - Time.deltaTime <= 0)
         {
             gameObject.GetComponent<enemy>().restoreSpeed();
@@ -119,7 +126,7 @@ public class Status : MonoBehaviour
         if (!S[0])
         {
             AudioSource[] sound = gameObject.GetComponents<AudioSource>();
-            sound[1].volume = 0.3f;
+            sound[1].volume = 0.1f;
             sound[1].PlayOneShot(sound[1].clip);
             gameObject.GetComponent<enemy>().freeze();
         }
@@ -130,7 +137,7 @@ public class Status : MonoBehaviour
     void Explosion()
     {
         AudioSource[] sound = gameObject.GetComponents<AudioSource>();
-        sound[0].volume = 0.3f;
+        sound[0].volume = 0.1f;
         sound[0].PlayOneShot(sound[0].clip);
         Collider2D[] hit = Physics2D.OverlapCircleAll(gameObject.transform.position,2);
         if (hit.Length != 0)
@@ -173,7 +180,7 @@ public class Status : MonoBehaviour
         if (!priod)
         {
             AudioSource[] sound = gameObject.GetComponents<AudioSource>();
-            sound[2].volume = 0.3f;
+            sound[2].volume = 0.1f;
             sound[2].PlayOneShot(sound[2].clip);
             gameObject.GetComponent<enemy>().GetStun();
             priod = true;
