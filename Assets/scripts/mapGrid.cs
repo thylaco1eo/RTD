@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using LitJson;
+using UnityEngine.SceneManagement;
 
 public class mapGrid : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class mapGrid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string path = "./Assets/data/map.json";
+        int index = SceneManager.GetActiveScene().buildIndex;
+        string path = "./Assets/data/map-"+index+".json";
         cells = new mapcell[4 * height * width];
         map = new int[4 * height*width];
         if (File.Exists(path))
