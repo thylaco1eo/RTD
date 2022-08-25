@@ -21,12 +21,12 @@ public class mapGrid : MonoBehaviour
     void Start()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        string path = "./Assets/data/map-"+index+".json";
+        string text = Resources.Load<TextAsset>("data/map-" + index).ToString();
         cells = new mapcell[4 * height * width];
         map = new int[4 * height*width];
-        if (File.Exists(path))
+        if (text != null)
         {
-            map = LoadMap(path);
+            map = LoadMap(text);
             for (int i = -1*height, count = 0; i < height; i++)
             {
                 for (int j = -1*width; j < width; j++)
@@ -60,10 +60,9 @@ public class mapGrid : MonoBehaviour
         
     }
 
-	int[] LoadMap(string path)
+	int[] LoadMap(string str)
 	{
-		string Jsonstring = File.ReadAllText(path);
-        int[] data = JsonMapper.ToObject<int[]>(Jsonstring);
+        int[] data = JsonMapper.ToObject<int[]>(str);
         return data;
     }
 

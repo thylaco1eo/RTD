@@ -18,6 +18,10 @@ public class spawnEnemy : MonoBehaviour
     private int enemiesSpawned = 0;
     public GameObject[] maps;
     public Wave[] waves;
+
+    private GameObject gameOver;
+
+    private GameObject gameWon;
     // Start is called before the first frame update
     void Start()
     {

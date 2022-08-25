@@ -77,15 +77,29 @@ public class GameManagerBehaviour : MonoBehaviour
              set
              {
                  wave = value;
-                 /*
-                 if (!gameOver)
+                 
+                 if (wave==maxWave)
                  {
-                     for (int i = 0; i < nextWaveLabels.Length; i++)
+                     gameOver = true;
+                     Scene scene = SceneManager.GetActiveScene();
+                     GameObject gameWon = (GameObject)Instantiate(Resources.Load("prefab/gameWon"));
+                     if (scene.buildIndex == 3)
                      {
-                         nextWaveLabels[i].GetComponent<Animator>().SetTrigger("nextWave");
+                         gameWon.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Text>()
+                             .text = "Menu";
                      }
-                 }*/
-                 UI.transform.GetChild(2).gameObject.GetComponent<Text>().text = "WAVE: " + (wave + 1)+"/"+maxWave;
+                     GameObject NextLevel = gameWon.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+                     NextLevel.GetComponent<Button>().onClick.AddListener(() =>
+                     {
+                         Scene scene = SceneManager.GetActiveScene();
+                         SceneManager.LoadScene((scene.buildIndex + 1)%4);
+                     });
+                 }
+                 else
+                 {
+                     UI.transform.GetChild(2).gameObject.GetComponent<Text>().text = "WAVE: " + (wave + 1)+"/"+maxWave;
+                 }
+                 
              }
          }
 

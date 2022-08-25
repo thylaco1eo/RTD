@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     public Vector3 targetPosition;
     public int type;
     private GameManagerBehaviour gameManager;
+    private float timeNeed;
 
     private float distance;
     private float startTime;
@@ -22,7 +23,7 @@ public class Bullet : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
         startTime = Time.time;
         distance = Vector3.Distance(startPosition,targetPosition);
-        
+        timeNeed = distance / speed;
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class Bullet : MonoBehaviour
         }
         float travelTime = Time.time - startTime;
         gameObject.transform.position = Vector3.Lerp(startPosition, targetPosition, travelTime * speed/distance);
-        if (gameObject.transform.position.Equals(targetPosition))
+        if (gameObject.transform.position.Equals(targetPosition) || travelTime >=timeNeed)
         {
             if (target != null)
             {
