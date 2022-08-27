@@ -329,11 +329,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   Armor: 3
+  damage: 3
   map:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  value: 40
+  value: 50
 --- !u!58 &-4557458872582225461
 CircleCollider2D:
   m_ObjectHideFlags: 0

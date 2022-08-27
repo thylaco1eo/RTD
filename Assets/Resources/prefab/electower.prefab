@@ -49,12 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - cost: 100
-    damage: 10
+  - cost: 90
+    damage: 5
     AttackSpeed: 2
   - cost: 150
     damage: 10
-    AttackSpeed: 2
+    AttackSpeed: 1.5
   currentlevel:
     cost: 0
     damage: 0
@@ -76,7 +76,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 2
 --- !u!114 &8093330692107039702
 MonoBehaviour:
   m_ObjectHideFlags: 0

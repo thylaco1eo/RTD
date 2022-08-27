@@ -16,6 +16,7 @@ public class enemy : MonoBehaviour
     public float Armor;
     private int checkpoint = 0;
     private Vector3 startPosition;
+    public int damage;
     public GameObject[] map;
 
     public int value;
@@ -61,9 +62,9 @@ public class enemy : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
                 GameManagerBehaviour gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
-                gameManager.Health = math.max(0, gameManager.Health - 10);
+                gameManager.Health = math.max(0, gameManager.Health - damage);
+                Destroy(gameObject);
             }
         }
     }

@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0373b95601e7e894f986184b9d35d39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  currentHealth: 20
+  maxHealth: 25
+  currentHealth: 25
 --- !u!1 &2458120099464965054
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,8 +245,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   Armor: 10
+  damage: 2
   map: []
-  value: 30
+  value: 40
 --- !u!58 &-4557458872582225461
 CircleCollider2D:
   m_ObjectHideFlags: 0

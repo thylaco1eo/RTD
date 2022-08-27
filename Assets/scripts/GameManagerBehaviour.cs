@@ -22,8 +22,8 @@ public class GameManagerBehaviour : MonoBehaviour
     {
         spawnenemy = GameObject.Find("Road").GetComponent<spawnEnemy>();
         MaxWave = spawnenemy.waves.Length;
-        Gold = 1000;
-        Health = 35;
+        Gold = 600;
+        Health = 15;
         basement.transform.GetChild(1).gameObject.GetComponent<HealthBar>().maxHealth = Health;
         Wave = 0;
     }
@@ -54,7 +54,7 @@ public class GameManagerBehaviour : MonoBehaviour
         set
         {
             timebetweenspawn = value;
-            UI.transform.GetChild(3).gameObject.GetComponent<Text>().text = "NEXT WAVE IN:" + timebetweenspawn.ToString("n2");
+            UI.transform.GetChild(3).gameObject.GetComponent<Text>().text = "NEXT WAVE IN:" + timebetweenspawn.ToString("n1");
         }
     }
     public int Gold {
@@ -82,6 +82,10 @@ public class GameManagerBehaviour : MonoBehaviour
                  {
                      gameOver = true;
                      Scene scene = SceneManager.GetActiveScene();
+                     AudioSource[] audio = gameObject.GetComponents<AudioSource>();
+                     audio[0].Stop();
+                     audio[1].volume = 0.1f;
+                     audio[1].PlayOneShot(audio[1].clip);
                      GameObject gameWon = (GameObject)Instantiate(Resources.Load("prefab/gameWon"));
                      if (scene.buildIndex == 3)
                      {
@@ -117,6 +121,10 @@ public class GameManagerBehaviour : MonoBehaviour
             if ( health<= 0 && !gameOver)
             {
                 gameOver = true;
+                AudioSource[] audio = gameObject.GetComponents<AudioSource>();
+                audio[0].Stop();
+                audio[2].volume = 0.1f;
+                audio[2].PlayOneShot(audio[2].clip);
                 GameObject gameEnd = (GameObject)Instantiate(Resources.Load("prefab/gameOver"));
                 GameObject Restart = gameEnd.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
                 Restart.GetComponent<Button>().onClick.RemoveAllListeners();
