@@ -60,12 +60,12 @@ public class main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && levelchoose.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Space) && levelchoose.activeSelf)
         {
             levelchoose.SetActive(false);
             panel.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && panel.transform.GetChild(2).gameObject.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Space) && panel.transform.GetChild(2).gameObject.activeSelf)
         {
             listener[0].SetActive(true);
             listener[1].SetActive(true);
