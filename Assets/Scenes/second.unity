@@ -235,6 +235,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1716175925056717164, guid: c40991e1733b9c64b81442b3dcb05f75, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716175925056717164, guid: c40991e1733b9c64b81442b3dcb05f75, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716175925056717164, guid: c40991e1733b9c64b81442b3dcb05f75, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 540
+      objectReference: {fileID: 0}
     - target: {fileID: 1716175925056717165, guid: c40991e1733b9c64b81442b3dcb05f75, type: 3}
       propertyPath: m_Camera
       value: 
