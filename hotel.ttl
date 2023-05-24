@@ -12897,14 +12897,14 @@
             schema:addressCountry "China"@en,
                 "中国"@zh ;
             schema:postalCode "" ;
-            schema:streetAddress "No.145Zhongshan6thRoadYuexiuDistrictGuangzhouGuangdongChina"@en,
-                "中国，广东，广州，越秀区，中山六路145号"@zh ],
+            schema:streetAddress "No.291GangkouAvenueZengchengDistrictGuangzhouGuangdongChina"@en,
+                "中国，广东，广州，增城区，新塘港口大道291号"@zh ],
         [ a schema:PostalAddress ;
             schema:addressCountry "China"@en,
                 "中国"@zh ;
             schema:postalCode "" ;
-            schema:streetAddress "No.291GangkouAvenueZengchengDistrictGuangzhouGuangdongChina"@en,
-                "中国，广东，广州，增城区，新塘港口大道291号"@zh ] ;
+            schema:streetAddress "No.145Zhongshan6thRoadYuexiuDistrictGuangzhouGuangdongChina"@en,
+                "中国，广东，广州，越秀区，中山六路145号"@zh ] ;
     schema:identifier "12750",
         "13431" ;
     schema:latitude "23.118609",
@@ -13135,8 +13135,8 @@
     schema:name "YimiHotel"@en,
         "'寰宇酒店广州鹅掌坦地铁站店'"@zh,
         "'逸米酒店广州中山医东山口地铁站店'"@zh ;
-    schema:starRating [ schema:ratingValue "0" ],
-        [ schema:ratingValue "2" ] ;
+    schema:starRating [ schema:ratingValue "2" ],
+        [ schema:ratingValue "0" ] ;
     schema:telephone "020-86210158",
         "020-87314686" .
 
